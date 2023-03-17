@@ -1,23 +1,29 @@
 body{
-    background-image: linear-gradient(white, lightpink, lavender );
+    background-image: linear-gradient( lightgreen, lightskyblue);
     background-size: cover;
     background-repeat: no-repeat;
 }
-.trash{
+.icon{
     width: 20px;
     height: 20px;
 }
-.edit{
-    width: 20px;
-    height: 20px;
-}
+
 button{
     width: 40px;
     height: 30px;
 }
 #container{
     border: 2px double mediumslateblue;
-    background-color: salmon;
+    background-color: whitesmoke;
+    margin: 20px;
+    padding: 20px;
+}
+li{
+    list-style-type: none;
+}
+.todo{
+    border: 2px double mediumslateblue;
+    background-color: whitesmoke;
     margin: 20px;
     padding: 20px;
 }
