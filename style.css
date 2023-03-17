@@ -1,0 +1,23 @@
+body{
+    background-image: linear-gradient(white, lightpink, lavender );
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.trash{
+    width: 20px;
+    height: 20px;
+}
+.edit{
+    width: 20px;
+    height: 20px;
+}
+button{
+    width: 40px;
+    height: 30px;
+}
+#container{
+    border: 2px double mediumslateblue;
+    background-color: salmon;
+    margin: 20px;
+    padding: 20px;
+}
