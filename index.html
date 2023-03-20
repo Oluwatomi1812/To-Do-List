@@ -11,20 +11,11 @@
 </head>
 <body>
     <h1>TO-DO-LIST</h1>
-    <input type="text" id="input">
-    <button id="add"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/1665/1665731.png" alt=""></button>
-    <ul id="ul">
-        <li>
-            <div id="container">
-                <p id="p"></p>
-                <button class="edit-button"><img class = "icon" src= "https://cdn-icons-png.flaticon.com/128/1160/1160758.png"></button>
-                <button class="delete-button"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/1215/1215092.png"></button> 
-            </div>
-        </li>
-        
-    </ul>
-        
+    <input type="text" id="input" placeholder="Enter task here...">
+    <button id="add" onclick="addItem()"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/1665/1665731.png" alt=""></button>
 
-    <script src="index.js"></script>
+    <div class="to-do"></div>
+       
+    <script src="cheat.js"></script>
 </body>
 </html>
