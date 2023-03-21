@@ -1,21 +1,23 @@
-const toDoItems = document.getElementsByClassName("to-do")[0];
 const input = document.getElementById("input");
 const trash = document.getElementById("delete-button");
+const clear = document.getElementById("clear")
+let arr = []
 
 
-
-input.addEventListener("Keyup", function(event){
-    if(event.key === "Enter")
-    addItem();
-})
 function addItem(){
+    let list = document.createElement("li")
     let divParent = document.createElement("div")
     let divChild = document.createElement("div")
     let editIcon = document.createElement("button")
     let deleteIcon = document.createElement("button")
+    
+    let item = input.value
+    arr.push(item)
+    localStorage.setItem("task", JSON.stringify(arr))
+    console.log(localStorage.getItem("task"))
 
     divParent.className = "container";
-    divParent.innerHTML = '<div>'+input.value+'</div>';
+    divParent.innerHTML = '<div>'+item+'</div>';
     divParent.addEventListener("dblclick", function(){
         divParent.style.textDecoration = "line-through"
     })
@@ -25,18 +27,6 @@ function addItem(){
     editIcon.addEventListener("click", function(){
         divParent.contentEditable = true;
     })
-
-
-    toDoItems.innerHTML = localStorage.getItem("tasks")
-
-input.addEventListener("keyup", display)
-
-function display(){
-localStorage.setItem("tasks", input.value)
-toDoItems.innerHTML = localStorage.getItem("tasks")
-}
-
-
 
 
     divChild.appendChild(editIcon)
@@ -50,10 +40,14 @@ toDoItems.innerHTML = localStorage.getItem("tasks")
 
     divParent.appendChild(divChild)
 
-    toDoItems.appendChild(divParent)
+    list.appendChild(divParent)
 
     input.value = '';
+    const myUl = document.getElementById("to-do")
+    myUl.insertBefore(list, myUl.children[0])
 }
 
-
-toDoItems.insertBefore(div, list.children[0]);
+clear.addEventListener("click", function(){
+    localStorage.clear();
+    location.reload();
+})

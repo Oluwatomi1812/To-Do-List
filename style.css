@@ -1,13 +1,19 @@
 body{
-    background-image: linear-gradient( lightgreen, lightskyblue);
-    background-size: cover;
+    background-image: linear-gradient( lightgreen, lightskyblue) ;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-color: lightskyblue;
 }
 .icon{
     width: 20px;
     height: 20px;
+    padding-top: 3px;
 }
-
+.enter{
+    display: flex;
+    
+}
 #input{
     width: 400px;
     height: 30px;
@@ -16,7 +22,6 @@ body{
 button{
     width: 40px;
     height: 35px;
-    display: inline-flex;
 }
 .container{
     border: 2px double mediumslateblue;

@@ -11,11 +11,15 @@
 </head>
 <body>
     <h1>TO-DO-LIST</h1>
-    <input type="text" id="input" placeholder="Enter task here...">
-    <button id="add" onclick="addItem()"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/1665/1665731.png" alt=""></button>
+    <div class="enter">
+        <input type="text" id="input" placeholder="Enter task here...">
+        <button id="add" onclick="addItem()"><img class="icon" src="https://cdn-icons-png.flaticon.com/128/1665/1665731.png" alt=""></button>
+        <button id="clear" style="padding: 0 ;">Clear</button>   
+    </div>
 
-    <div class="to-do"></div>
-       
+
+    <ul id="to-do"> </ul>
+           
     <script src="script.js"></script>
 </body>
 </html>
