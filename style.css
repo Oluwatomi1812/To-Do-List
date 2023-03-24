@@ -12,7 +12,6 @@ body{
 }
 .enter{
     display: flex;
-    
 }
 #input{
     width: 400px;
